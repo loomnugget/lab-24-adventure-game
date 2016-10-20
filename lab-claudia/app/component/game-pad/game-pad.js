@@ -21,7 +21,7 @@ function GamePadController($log, playerService) {
   this.movePlayer = function() {
     playerService.movePlayer(this.moveDirection)
     .then( location => {
-      $log.log(`Player at new loaction: ${location}`);
+      $log.log(`Player at new location: ${location}`);
     })
     // if room doesn't exist, catches error
     .catch(err => {

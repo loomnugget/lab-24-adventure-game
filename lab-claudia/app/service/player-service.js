@@ -16,15 +16,19 @@ function playerService($q, $log, mapService) {
   //add features
   let turn = 0;
   let player = service.player = {
-    name: 'slugneo',
+    name: 'Bob',
     //where the player starts off
-    location: 'A',
-    hp: 16,
+    location: 'Waterfall',
+    hp: 100,
   };
 
   let history = service.history = [
-
-
+    {
+      turn,
+      desc:'welcome to the game',
+      location: '',
+      hp: player.hp,
+    },
   ];
 
   service.movePlayer = function(direction) {
@@ -39,7 +43,7 @@ function playerService($q, $log, mapService) {
       if (!newLocation) {
         history.unshift({
           turn,
-          desc: 'you hit a wall',
+          desc: 'Wrong way.',
           location: player.location,
           hp: player.hp,
         });

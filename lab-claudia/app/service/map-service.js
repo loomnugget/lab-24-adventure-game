@@ -13,34 +13,53 @@ function mapService($log) {
   let service = {};
   //add features to service - add properties
   service.mapData = {
-    A: {
-      desc: 'You are in room A. There are two paths leaving this room. Good luck trolololo',
-      south: 'C',
-      east: 'B',
+    'Waterfall': {
+      desc: 'You appear near a beautiful waterfall. Welcome to the dungeon of evil and treasure. Good luck trolololo',
+      south: 'Lemon Candy',
+      east: 'Goose Shrine',
     },
-    B: {
-      desc: 'You are in room B. You cant see shit',
-      south: 'D',
-      west: 'A',
+    'Goose Shrine': {
+      desc: 'You walk by a goose shrine. Although you are put off by this weird sight, you smell treasure nearby and move onward',
+      south: 'Bird Room',
+      west: 'Waterfall',
     },
-    C: {
-      desc: 'You are in room C. Maybe there is light to the north.',
-      north: 'A',
-      east: 'D',
+    'Lemon Candy': {
+      desc: 'You are in a room full of lemon candy. Do you stop to eat it?',
+      items: ['Lemon Candy', 'Hachet'],
+      north: 'Waterfall',
+      east: 'Bird Room',
     },
-    D: {
-      desc: 'You are in room D. You hear bird calls to the north.',
-
-      north: 'B',
-      west: 'C',
-      south: 'X',
+    'Bird Room': {
+      desc: 'Why are there so many birds in this dungeon, you think to yourself? You hear bird calls to the north but keep focused on obtaining treasure.',
+      items: ['Carrier pigeon'],
+      north: 'Goose Shrine',
+      west: 'Lemon Candy',
+      south: 'Spider Pit',
     },
-    X: {
-      desc: 'You are in room X. You are in quick sand. The birds laugh at your misfortune',
-      south: 'X',
-      north: 'X',
-      east: 'X',
-      west: 'A',
+    'Nick Cage Commemeration Room': {
+      desc: 'This is the best place ever!',
+      items: ['Cardboard cutout of Nick Cage'],
+      east: 'Nick Cage Commemeration Room',
+      west: 'Nick Cage Commemeration Room',
+      north: 'Nick Cage Commemeration Room',
+      south: 'Darkness',
+    },
+    'Darkness': {
+      desc: 'The treasure is getting closer.',
+      east: 'Spider Pit',
+      south: 'Treasure Forever',
+      north: 'Nick Cage Commemeration Room',
+    },
+    'Treasure Forever': {
+      desc: 'You found the treasure! But you notice the door sliding closed behind you. You are trapped here forever. The end.',
+      north: 'Darkness',
+    },
+    'Spider Pit': {
+      desc: 'You fall into a pit of spiders. Have fun escaping this one!',
+      south: 'Spider Pit',
+      north: 'Spider Pit',
+      east: 'Spider Pit',
+      west: 'Waterfall',
     },
   };
 

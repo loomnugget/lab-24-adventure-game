@@ -2,18 +2,19 @@
 
 .game-history {
   margin: 2%;;
+  font-size: 150%;
 
   ol {
     padding: 0px;
     list-style: none;
 
     li {
-      margin:0 40% 2% 40%;
+      margin:0 25% 2% 25%;
       padding: 1%;
       border-radius: 5px;
       color: $app-white;
       background-color: $app-red;
-      width: 20%;
+      width: 50%;
       p {
         margin: 0px;
       }
