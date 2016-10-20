@@ -1,0 +1,36 @@
+@import "_vendor";
+@import "_theme";
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: $app-bg;
+  color: $app-color;
+  font-family: $app-font;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 320%;
+}
+
+button {
+  border: 1px solid $app-white;
+  background-color: $button-bg;
+  color: $app-white;
+}
+
+button, input, select {
+  padding: .5% 1%;
+  margin: 0 1%;
+  border-radius: 3px;
+  font-size: 130%;
+}
+
+.titlefont {
+  font-size: 130%;
+}

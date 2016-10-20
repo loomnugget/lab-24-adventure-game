@@ -1,0 +1,17 @@
+@import "_theme";
+
+.player-info {
+  margin: 1% 30%;
+  padding: 0 1%;
+  border: 2px solid $app-white;
+  border-radius: 3px;
+  width: 40%;
+}
+
+.player-info p{
+  font-size: 250%;
+}
+
+.player-info p span {
+  font-weight: bold;
+}
